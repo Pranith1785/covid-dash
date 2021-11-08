@@ -17,6 +17,8 @@ import os
 ## Start dash APP
 app = dash.Dash(external_stylesheets = [ dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP,dbc.icons.FONT_AWESOME])
 
+app.title = "COVID-19 Dashboard"
+server = app.server 
 ## covid data API
 #url = "https://api.covid19api.com/summary"
 #response_world = requests.request("GET", url)
@@ -161,4 +163,4 @@ def tableInfo(countryValue):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True,port='7272')
+    app.run_server(debug=False)
